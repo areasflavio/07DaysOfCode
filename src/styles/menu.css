@@ -1,0 +1,16 @@
+.menu {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+
+  color: #202020;
+}
+
+.menu ul {
+  display: flex;
+}
+
+.menu ul li + li::before {
+  content: "/";
+  margin: 0 10px;
+}
