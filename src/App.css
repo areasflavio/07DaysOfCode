@@ -9,6 +9,9 @@ body {
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+
+  background: #F7F7F7;
 }
 
 a {
@@ -23,6 +26,18 @@ ul {
 main {
   max-width: 1200px;
   margin: 10px auto;
+}
+
+input {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+input, button {
+  border: none;
 }
 
 .titulo {
