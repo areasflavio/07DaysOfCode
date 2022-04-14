@@ -1,8 +1,10 @@
-import logoImg from "../assets/logo.svg";
+import logoImg from "../../assets/logo.svg";
+
+import { Container } from "./styles";
 
 export const Menu = () => {
   return (
-    <header className="menu">
+    <Container>
       <img src={logoImg} alt="CasaVerde" />
 
       <ul>
@@ -22,6 +24,6 @@ export const Menu = () => {
           <a href="#">Meu carrinho</a>
         </li>
       </ul>
-    </header>
+    </Container>
   );
 };

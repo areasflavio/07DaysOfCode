@@ -1,8 +1,10 @@
-import mailImg from "../assets/mail.svg";
+import mailImg from "../../assets/mail.svg";
+
+import { Container } from "./styles";
 
 export const AssinaturaNewsletter = () => {
   return (
-    <section className="assinatura-newsletter">
+    <Container>
       <span>Sua casa com as</span>
       <h2>
         melhores
@@ -22,6 +24,6 @@ export const AssinaturaNewsletter = () => {
 
         <button type="submit">Assinar newsletter</button>
       </form>
-    </section>
+    </Container>
   );
 };
