@@ -25,7 +25,7 @@ ul {
 
 main {
   max-width: 1200px;
-  margin: 10px auto;
+  padding: 10px 20px;
 }
 
 input {
@@ -38,9 +38,5 @@ button {
 
 input, button {
   border: none;
-}
-
-.titulo {
-  font-family: 'Elsie Swash Caps', cursive;
 }
 
