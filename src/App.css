@@ -5,11 +5,9 @@
 }
 
 body {
-  margin: 0;
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 
   background: #F7F7F7;
 }
@@ -26,6 +24,7 @@ ul {
 main {
   max-width: 1200px;
   padding: 10px 20px;
+  margin: 0 auto;
 }
 
 input {

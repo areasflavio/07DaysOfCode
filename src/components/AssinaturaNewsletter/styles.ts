@@ -92,6 +92,11 @@ export const Container = styled.section`
 
       padding: 0 24px;
       color: #ffffff;
+
+      &[disabled] {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
     }
   }
 `;

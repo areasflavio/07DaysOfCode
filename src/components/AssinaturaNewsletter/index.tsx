@@ -1,8 +1,31 @@
+import { FormEvent, useEffect, useRef, useState } from "react";
+
 import mailImg from "../../assets/mail.svg";
 
 import { Container } from "./styles";
 
 export const AssinaturaNewsletter = () => {
+  const [email, setEmail] = useState("");
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if(email.trim() !== "") {
+      setIsButtonDisabled(!inputRef.current?.checkValidity());
+    }
+  }, [email]);
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+
+    alert(
+      `Obrigado pela sua assinatura, você receberá nossas novidades no e-mail: ${email}`
+    );
+
+    setEmail("");
+  };
+
   return (
     <Container>
       <span>Sua casa com as</span>
@@ -17,12 +40,19 @@ export const AssinaturaNewsletter = () => {
         assine nossa newsletter para saber das novidades da marca.
       </p>
 
-      <form>
+      <form onSubmit={handleSubmit}>
         <img src={mailImg} alt="" />
 
-        <input name="email" type="email" placeholder="Insira seu e-mail" />
+        <input
+          ref={inputRef}
+          name="email"
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Insira seu e-mail"
+        />
 
-        <button type="submit">Assinar newsletter</button>
+        <button disabled={isButtonDisabled} type="submit">Assinar newsletter</button>
       </form>
     </Container>
   );
